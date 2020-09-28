@@ -96,6 +96,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
 
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        nextButton.isEnabled = true
+        backButton.isEnabled = true
+        startstopButton.setTitle("再生", for: .normal)
     }
 }
 
