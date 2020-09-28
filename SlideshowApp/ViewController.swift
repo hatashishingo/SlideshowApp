@@ -20,10 +20,10 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     var timer: Timer!
     
     var imageArray:[UIImage] = [
-        UIImage(named: "cherry.jpg")!,
-        UIImage(named: "ocean.jpg")!,
-        UIImage(named: "Colored leaves.jpg")!,
-        UIImage(named: "snow.jpg")!
+        UIImage(named: "cherry.jpeg")!,
+        UIImage(named: "ocean.jpeg")!,
+        UIImage(named: "Colored leaves.jpeg")!,
+        UIImage(named: "snow.jpeg")!
     ]
     
     override func viewDidLoad() {
@@ -42,6 +42,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     
     @objc func tapped(_ sender: UITapGestureRecognizer){
         if sender.state == .ended {
+            timer.invalidate()
+            timer = nil
             performSegue(withIdentifier: "showSegue", sender: self)
         }
     }
